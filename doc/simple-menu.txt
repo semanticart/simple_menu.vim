@@ -36,7 +36,7 @@ For example:
     \ ['d', 'Migrate file down', 'MigrateDown'],
     \ ['r', 'Re-migrate file (down then up)', 'MigrateRedo'],
   \ ])
->
+<
 
 Will show a menu with 4 options. Pressing the <d> key will run the function
 `MigrateDown`.
