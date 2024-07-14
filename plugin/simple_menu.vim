@@ -11,8 +11,14 @@ function! SimpleMenu(options)
         let l:choice_map[l:key] = choice[1]
         let l:description = substitute(l:description, "^:", '', '')
     endif
+
+    let l:key_display = l:key
+    if l:key == ' '
+        let l:key_display = '<space>'
+    endif
     echohl Boolean
-    echon ' ' . l:key . ' '
+    echon ' ' . l:key_display . ' '
+
     echohl None
     echon l:description
     echo ''
