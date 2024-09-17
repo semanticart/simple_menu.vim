@@ -12,10 +12,11 @@
 CONTENTS                                        *SimpleMenuContents*
 
     1. Usage ................ |SimpleMenuUsage|
-    2. License .............. |SimpleMenuLicense|
-    3. Bugs ................. |SimpleMenuBugs|
-    4. Contributing ......... |SimpleMenuContributing|
-    5. Changelog ............ |SimpleMenuChangelog|
+    2. Examples ............. |SimpleMenuExamples|
+    3. License .............. |SimpleMenuLicense|
+    4. Bugs ................. |SimpleMenuBugs|
+    5. Contributing ......... |SimpleMenuContributing|
+    6. Changelog ............ |SimpleMenuChangelog|
 
 ====================================================================
 Section 1: Usage                                   *SimpleMenuUsage*
@@ -42,25 +43,76 @@ Will show a menu with 4 options. Pressing the <d> key will run the function
 
 
 ====================================================================
-Section 2: License                               *SimpleMenuLicense*
+Section 2: Examples                             *SimpleMenuExamples*
+
+Using functions:
+>
+    function! SayHi()
+        echo 'Hello'
+    endfunction
+
+    function! SayBye()
+        echo 'See Ya!'
+    endfunction
+
+    function! MyGreetPopup()
+        call MySimpleMenu([
+                \    ['h', 'Say Hi', 'SayHi'],
+                \    ['b', 'Say Bye', 'SayBye'],
+                \ ])
+    endfunction
+
+    noremap <leader>g :call MyGreetPopup()<CR>
+>
+
+Using vim commands:
+>
+    function! MyWindowMenu()
+        call SimpleMenu([
+            \    ['k', 'close above', ':wincmd k | wincmd c'],
+            \    ['j', 'close below', ':wincmd j | wincmd c'],
+        \ ])
+    endfunction
+
+    noremap <leader>w :call MyWindowMenu()<CR>
+>
+
+Showing commands or function names instead of descriptions (ALE integration):
+>
+    function! MyAleMenu()
+        call SimpleMenu([
+            \    ['d', ':ALEDetail'],
+            \    ['h', ':ALEHover'],
+            \    ['n', ':ALENext'],
+            \    ['p', ':ALEPrevious'],
+            \    ['i', ':ALEInfo'],
+        \ ])
+    endfunction
+
+    noremap <leader>l :call MyAleMenu()<CR>
+>
+
+
+====================================================================
+Section 3: License                               *SimpleMenuLicense*
 
 MIT
 
 ====================================================================
-Section 3: Bugs                                     *SimpleMenuBugs*
+Section 4: Bugs                                     *SimpleMenuBugs*
 
 If you find a bug please post it on the issue tracker:
 https://github.com/semanticart/simple-menu.vim
 
 
 ====================================================================
-Section 4: Contributing                     *SimpleMenuContributing*
+Section 5: Contributing                     *SimpleMenuContributing*
 
 If you have an idea for how to make this better, please fork the repo and send
 a pull-request to start a discussion.
 
 ====================================================================
-Section 5: Changelog                           *SimpleMenuChangelog*
+Section 6: Changelog                           *SimpleMenuChangelog*
 
 v 1.0
     *First stable release*

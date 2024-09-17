@@ -4,7 +4,7 @@
 
 Create simple menus in Vim that respond to key mappings.
 
-See the usage in the doc file for more info.
+See the usage in the doc file for more info: `:help simple-menu`.
 
 ![example](http://i.imgur.com/fF0UEG9.gif)
 
