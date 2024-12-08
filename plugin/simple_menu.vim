@@ -83,6 +83,7 @@ function! SimpleMenu(options, ...)
   " Define a function to restore the scroll position in the main buffer
   function! RestoreScroll(main_win, topline, cursor) abort
     call win_gotoid(a:main_win)               " Switch to the main buffer window
+    " Restore top visible line:
     execute 'normal! ' . a:topline . 'Gzt'
     call setpos('.', a:cursor)                " Restore the cursor position
   endfunction
