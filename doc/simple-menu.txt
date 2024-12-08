@@ -63,7 +63,7 @@ Using functions:
     endfunction
 
     noremap <leader>g :call MyGreetPopup()<CR>
->
+<
 
 Using vim commands:
 >
@@ -75,7 +75,7 @@ Using vim commands:
     endfunction
 
     noremap <leader>w :call MyWindowMenu()<CR>
->
+<
 
 Showing commands or function names instead of descriptions (ALE integration):
 >
@@ -90,7 +90,7 @@ Showing commands or function names instead of descriptions (ALE integration):
     endfunction
 
     noremap <leader>l :call MyAleMenu()<CR>
->
+<
 
 
 ====================================================================
