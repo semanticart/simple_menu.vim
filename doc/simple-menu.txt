@@ -102,7 +102,7 @@ MIT
 Section 4: Bugs                                     *SimpleMenuBugs*
 
 If you find a bug please post it on the issue tracker:
-https://github.com/semanticart/simple-menu.vim
+https://github.com/actionless/simple-menu.vim
 
 
 ====================================================================
